@@ -1,0 +1,37 @@
+
+*{  background: #ffffff;
+}
+ul {font-family: 'Oxygen', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    li {
+        
+        padding: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+        background: #fafafa;
+        box-shadow:  20px 20px 40px #bebebe,
+                    -20px -20px 40px #ffffff;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        }
+        p {
+            margin: 0;
+        }
+
+        p.name {
+            
+            font-weight: bolder;
+            font-size: 4rem;
+        }
+
+        img{
+            border-radius: 10px;
+        }
+    

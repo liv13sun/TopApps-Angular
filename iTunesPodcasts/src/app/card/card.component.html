@@ -1,0 +1,9 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+<ul *ngIf="cards">
+  <li *ngFor="let card of cards">
+    <p class="artistName">{{ card.artistName }}</p><br>
+    <img src={{card.artworkUrl100}} alt="{{card.artistName}}" width="150" height="150"> <br>
+    <a class="site" href="{{ card.url }}">site</a>
+  </li>
+</ul>
