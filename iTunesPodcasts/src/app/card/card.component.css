@@ -4,7 +4,7 @@ nav{ background: #ffffff;
     line-height: 1;
 }
 
-.title{
+a.title{
     font-size: 50px;
     font-weight:bold;
     color:#595959;
