@@ -2,6 +2,7 @@
 nav{ background: #ffffff;
     font-family: 'Oxygen', sans-serif;
     line-height: 1;
+    padding: 1em;
 }
 
 a.title{
@@ -17,6 +18,8 @@ ul {font-family: 'Oxygen', sans-serif;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
     }
 
 li {
@@ -29,7 +32,6 @@ li {
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
-        border-radius: 10px;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -51,10 +53,8 @@ p {
             margin: 0;
         }
 
-p.name {
-            
-            font-weight: bolder;
-            font-size: 4rem;
+p.artistName {
+            font-size: 18px;
         }
 
 img{
@@ -63,7 +63,7 @@ img{
     
 .button {
             background: #ffffff ;
-            border-radius: 50px;
+            border-radius: 10px;
             border: .5px solid #dcdcdc;
             display: inline-block;
             cursor: pointer;

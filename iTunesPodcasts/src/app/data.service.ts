@@ -16,4 +16,11 @@ export class DataService {
       return res['feed']['results'];
     }))
   }
+  getDetails(){
+    return this.http.get('https://rss.itunes.apple.com/api/v1/ro/podcasts/top-podcasts/all/20/explicit.json')
+    .pipe(
+      map(res => {
+      return res['feed']['results']['genres'];
+    }))
+  }
 }

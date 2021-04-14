@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from './../data.service';
 
 @Component({
   selector: 'details',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  details: any;
+  constructor(private info: DataService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.info.getDetails().subscribe(data => {
+      this.details = data;
+      console.log(this.details);
+    });
   }
 
 }
