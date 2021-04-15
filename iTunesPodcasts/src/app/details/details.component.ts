@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from './../data.service';
 
 @Component({
-  selector: 'details',
+  selector: 'detail',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
 
   details: any;
-  constructor(private info: DataService) { }
+  constructor(private info: DataService, private route : ActivatedRoute) { }
 
   ngOnInit(){
-    this.info.getDetails().subscribe(data => {
-      this.details = data;
-      console.log(this.details);
-    });
+    this.route.params.subscribe((params)=>{
+      let podcastName =  params['podcastName'];
+      this.details = this.info.getDetails(podcastName);
+   })
   }
 
 }

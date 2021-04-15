@@ -1,10 +1,8 @@
 <ul *ngIf="details">
-    <li *ngFor="let detail of details">
-      <p class="name">{{ details.name }}</p><br>
-      <p class="releaseDate">{{ details.releaseDate }}</p><br>
-      <p class="genres">{{ details.genres[0] }}</p><br>
-      <p class="genres">{{ details.genres[1] }}</p><br>
-      <p class="genres">{{ details.genres[2] }}</p><br>
-      <a class="button" href={{details.url}}>iTunes Link</a>
-    </li>
+    <ul>
+      <li><p class="name">{{ details.artistName }}</p></li>
+      <li><p class="releaseDate">Latest episode released on: {{ details.releaseDate }}</p></li>
+      <li><p class="genres">Genres: {{ details.genres[0].name }}, {{ details.genres[1].name }}, {{ details.genres[2].name }}</p></li>
+      <li><a class="button" href={{details.url}}>Apple Podcasts Preview</a></li>
+    </ul>
   </ul>
