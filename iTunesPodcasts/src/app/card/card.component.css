@@ -1,51 +1,46 @@
 
 nav{ background: #ffffff;
     font-family: 'Oxygen', sans-serif;
-    line-height: 1;
+    line-height: 1.5;
     padding: 1em;
 }
 
-a.title{
-    font-size: 50px;
-    font-weight:bold;
-    color:#595959;
+a.title{position: relative;
+        padding: 5rem;
+        font-size: 4.209rem;
+        font-weight:bold;
+        color:#595959;
+        text-decoration: none;
 }
 
-
-ul {font-family: 'Oxygen', sans-serif;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+ul {    display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap: 0.5rem;
+        list-style-type: none;
     }
 
 li {
         padding: 40px;
         margin-right: 10px;
         border-radius: 10px;
-        background: #fafafa;
-        box-shadow:  20px 20px 40px #bebebe,
-                    -20px -20px 40px #ffffff;
+        background: hsl(0, 0%, 98%);
+        box-shadow:  20px 20px 40px  hsl(0, 0%, 70%),
+                    -20px -20px 40px hsl(0, 0%, 100%);
         margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         }
 
 li:hover{
-    background:   #5260e0;
-    transform: scale(1.1);
-    transition: 0.3s all ease-in-out;
-    color: white;
-    font-weight: bolder;
+        background:   hsl(234, 70%, 60%);
+        transform: scale(1.1);
+        transition: 0.3s all ease-in-out;
+        color: white;
+        font-weight: bolder;
         }
-a{
-    color: white;
+
+a{  color: white;
     font-weight: bolder;
 }
 
@@ -53,11 +48,11 @@ p {
     margin: 0;
     }
 
-p.name {
-            font-size: 18px;
+p.name {    font-size: 1.777rem;
+            font-weight: 500;
             }
             
-img{
+img{ 
      border-radius: 10px;
     }
     
@@ -65,9 +60,10 @@ img{
             background: #ffffff ;
             border-radius: 10px;
             border: .5px solid #dcdcdc;
-            display: inline-block;
             cursor: pointer;
             color: #595959;
             padding: 6px 24px;
             text-decoration: none;
+            font-size: 1.333rem;
+            margin-bottom: 1rem;
         }
