@@ -1,9 +1,27 @@
 <ul *ngIf="details">
-    <ul>
-      <img src={{details.artworkUrl100}} alt="{{details.artistName}}" width="250" height="250"><br>
-      <li><p class="name">{{ details.artistName }}</p></li>
-      <li><p class="releaseDate">Latest episode released on: {{ details.releaseDate }}</p></li>
-      <li><p class="genres">Genres: {{ details.genres[0].name }}, {{ details.genres[1].name }}, {{ details.genres[2].name }}</p></li>
-      <li><a class="button" href={{details.url}}>Apple Podcasts Preview</a></li>
-    </ul>
+  <ul>
+    <img
+      src="{{ details.artworkUrl100 }}"
+      alt="{{ details.artistName }}"
+      width="250"
+      height="250"
+    /><br />
+    <li>
+      <p class="name">{{ details.artistName }}</p>
+    </li>
+    <li>
+      <p class="releaseDate">
+        Latest episode released on: {{ details.releaseDate }}
+      </p>
+    </li>
+    <li>
+      <p class="genres">
+        Genres: {{ details.genres[0].name }}, {{ details.genres[1].name }},
+        {{ details.genres[2].name }}
+      </p>
+    </li>
+    <li>
+      <a class="button" href="{{ details.url }}">Apple Podcasts Preview</a>
+    </li>
   </ul>
+</ul>

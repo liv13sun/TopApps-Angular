@@ -1,12 +1,28 @@
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
-  <div class = "grid-container">
-    <a class='title' routerLink = '/'>Top iTunes Podcasts</a><br><br><br>
-    <ul *ngIf="cards"> <!--the grid container-->
-      <li *ngFor="let card of cards"> <!--the cards-->
-        <img src={{card.artworkUrl100}} alt="{{card.artistName}}" width="150" height="150"><br>
-        <p class="text">{{ card.name }}</p><br>
-        <a class="button" [routerLink] = "['/details',card.name]" routerLinkActive = "active" >Details</a>
-        </li>
-    </ul>
-  </div> 
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+<div class="grid-container">
+  <a class="title" routerLink="/">Top iTunes Podcasts</a><br /><br /><br />
+  <ul *ngIf="cards">
+    <!--the grid container-->
+    <li *ngFor="let card of cards">
+      <!--the cards-->
+      <img
+        src="{{ card.artworkUrl100 }}"
+        alt="{{ card.artistName }}"
+        width="150"
+        height="150"
+      /><br />
+      <p class="text">{{ card.name }}</p>
+      <br />
+      <a
+        class="button"
+        [routerLink]="['/details', card.name]"
+        routerLinkActive="active"
+        >+ Details</a
+      >
+    </li>
+  </ul>
+</div>
