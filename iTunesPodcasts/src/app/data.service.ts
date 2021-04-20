@@ -13,10 +13,10 @@ export class DataService {
     return this.http.get('https://rss.itunes.apple.com/api/v1/ro/podcasts/top-podcasts/all/20/explicit.json')
     .pipe(
       map(res => {
-      let podcasts = res['feed']['results'];
+      const podcasts = res.feed.results;
       this.podcasts = podcasts;
       return podcasts;
-    }))
+    }));
   }
   getDetails(podcastName: string){
     return this.podcasts.filter( val => val.name === podcastName )[0];

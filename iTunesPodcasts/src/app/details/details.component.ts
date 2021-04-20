@@ -10,13 +10,13 @@ import { DataService } from './../data.service';
 export class DetailsComponent implements OnInit {
 
   details: any;
-  constructor(private info: DataService, private route : ActivatedRoute) { }
+  constructor(private info: DataService, private route: ActivatedRoute) { }
 
   ngOnInit(){
-    this.route.params.subscribe((params)=>{
-      let podcastName =  params['podcastName'];
+    this.route.params.subscribe((params) => {
+      const podcastName =  params.podcastName;
       this.details = this.info.getDetails(podcastName);
-   })
+   });
   }
 
 }
