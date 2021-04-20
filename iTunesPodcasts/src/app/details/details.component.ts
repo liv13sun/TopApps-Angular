@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DataService } from './../data.service';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'detail',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
